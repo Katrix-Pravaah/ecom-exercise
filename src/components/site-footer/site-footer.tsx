@@ -5,6 +5,7 @@ import { ReactComponent as DiscordIcon } from '../../assets/svg/discord.svg';
 import { ReactComponent as YoutubeIcon } from '../../assets/svg/youtube.svg';
 import { ReactComponent as MediumIcon } from '../../assets/svg/medium.svg';
 import { ReactComponent as GithubIcon } from '../../assets/svg/github.svg';
+import Classnames from 'classnames';
 
 export interface FooterProps {
     className?: string;
@@ -16,9 +17,31 @@ export interface FooterProps {
  */
 export const Footer = ({ className }: FooterProps) => {
     return (
-        <div>
+        <div className={styles.div2}>
             <div className={styles.details}>
-                <div>Contact Jane Doe</div>
+                <div>
+                    Contact Jane Doe
+                    <div className={styles.div1}>
+                        <a href="/">
+                            <TwitterxIcon className={styles.icon} />
+                        </a>
+                        <a href="/">
+                            <FacebookIcon className={styles.icon} />
+                        </a>
+                        <a href="/">
+                            <DiscordIcon className={Classnames(styles.icon, styles.discordIcon)} />
+                        </a>
+                        <a href="/">
+                            <YoutubeIcon className={styles.icon} />
+                        </a>
+                        <a href="/">
+                            <MediumIcon className={styles.icon} />
+                        </a>
+                        <a href="/">
+                            <GithubIcon className={styles.icon} />
+                        </a>
+                    </div>
+                </div>
                 <div>
                     Mail: info@mysite.com
                     <br />
@@ -28,26 +51,6 @@ export const Footer = ({ className }: FooterProps) => {
                     <br />
                     San Francisco, CA 94158
                 </div>
-            </div>
-            <div>
-                <a href="/">
-                    <TwitterxIcon className={styles.icon} />
-                </a>
-                <a href="/">
-                    <FacebookIcon className={styles.icon} />
-                </a>
-                <a href="/">
-                    <DiscordIcon className={styles.icon} />
-                </a>
-                <a href="/">
-                    <YoutubeIcon className={styles.icon} />
-                </a>
-                <a href="/">
-                    <MediumIcon className={styles.icon} />
-                </a>
-                <a href="/">
-                    <GithubIcon className={styles.icon} />
-                </a>
             </div>
         </div>
     );

@@ -1,0 +1,27 @@
+@import '@styles/theme.module.scss';
+
+.root {
+    height: 200px;
+    display: flex;
+}
+.header1 {
+    font-size: 30px;
+    display: grid;
+    width: 704px;
+    text-align: start;
+    grid-template-rows: 1fr 1fr;
+    border-top: 20px solid $white;
+    border-left: 20px solid $white;
+}
+.header2 {
+    display: flex;
+}
+.header3 {
+    justify-content: end;
+    display: grid;
+}
+.header4 {
+    text-align: end;
+    border-right: 20px solid $white;
+    font-weight: 800;
+}
